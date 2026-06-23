@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const links = [
@@ -11,33 +12,36 @@ const links = [
 export function Nav() {
   return (
     <header className="sticky top-0 z-50 border-b border-slate-100 bg-white/90 backdrop-blur">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
-        <Link href="/" className="text-xl font-black tracking-tight text-navy">
-          CCC
-          <span className="ml-2 text-xs font-semibold uppercase tracking-[0.22em] text-bodyText">
-            Cricket Corporate Collective
-          </span>
-        </Link>
+  <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
+    <Link href="/" className="flex items-center">
+      <Image
+        src="/logo.png"
+        alt="Corporate Cricket Collective"
+        width={220}
+        height={60}
+        priority
+      />
+    </Link>
 
-        <nav className="hidden items-center gap-8 md:flex">
-          {links.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="text-sm font-semibold text-navy hover:text-gold"
-            >
-              {link.label}
-            </Link>
-          ))}
-        </nav>
-
+    <nav className="hidden items-center gap-8 md:flex">
+      {links.map((link) => (
         <Link
-          href="/proposal"
-          className="rounded-full bg-gold px-7 py-4 text-sm font-black text-navy shadow-premium transition hover:scale-105"
+          key={link.href}
+          href={link.href}
+          className="text-sm font-bold text-navy transition hover:text-gold"
         >
-          Request A Proposal
+          {link.label}
         </Link>
-      </div>
-    </header>
+      ))}
+    </nav>
+
+    <Link
+      href="/proposal"
+      className="rounded-full bg-gold px-5 py-3 text-sm font-bold text-navy shadow-premium transition hover:-translate-y-0.5"
+    >
+      Request A Proposal
+    </Link>
+  </div>
+</header>
   );
 }
