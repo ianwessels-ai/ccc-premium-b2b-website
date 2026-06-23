@@ -12,13 +12,13 @@ const links = [
 export function Nav() {
   return (
     <header className="sticky top-0 z-50 border-b border-slate-100 bg-white/90 backdrop-blur">
-  <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
+  <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-7"> 
     <Link href="/" className="flex items-center">
       <Image
         src="/logo.png"
         alt="Corporate Cricket Collective"
-        width={220}
-        height={60}
+        width={400}
+        height={120}
         priority
       />
     </Link>
