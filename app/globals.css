@@ -1,0 +1,26 @@
+/* stylelint-disable at-rule-no-unknown -- allow Tailwind directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* stylelint-enable at-rule-no-unknown */
+
+:root {
+  --navy: #031E49;
+  --gold: #E5A823;
+  --canvas: #FFFFFF;
+  --slate-canvas: #F8FAFC;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--canvas);
+  color: #475569;
+}
+
+::selection {
+  background: var(--gold);
+  color: var(--navy);
+}
