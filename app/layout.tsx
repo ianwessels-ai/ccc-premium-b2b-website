@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-
+import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.corporatecricketcollective.com"),
   title: "Cricket Corporate Collective | Premium Corporate Cricket Experiences",
