@@ -9,9 +9,9 @@ export default function ProposalPage() {
   const router = useRouter();
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
-    console.log("HANDLE SUBMIT RUNNING");
-    event.preventDefault();
+  event.preventDefault();
 
+  try {
     const formData = new FormData(event.currentTarget);
 
     const response = await fetch("/api/proposal", {
@@ -21,8 +21,14 @@ export default function ProposalPage() {
 
     if (response.ok) {
       router.push("/thank-you");
+    } else {
+      alert("Something went wrong. Please try again.");
     }
+  } catch (error) {
+    console.error(error);
+    alert("The form could not be submitted. Please try again.");
   }
+}
 
   return (
     <>
