@@ -20,7 +20,7 @@ const location = formData.get("location");
   from: "CCC Website <onboarding@resend.dev>",
   to: ["ian_wessels@icloud.com"],
   replyTo: email as string,
-  subject: `New Proposal Request from ${company}`,
+  subject: '🏏 New Corporate Event Enquiry | ABC Company',
   html: `
     <div style="font-family: Arial, Helvetica, sans-serif; max-width: 700px; margin: 0 auto; color: #1f2937;">
       <div style="background:#0B1F4D;padding:30px;text-align:center;">
@@ -54,10 +54,24 @@ const location = formData.get("location");
         </div>
 
         <p style="color:#6b7280;font-size:12px;margin-top:30px;">
-          Submitted: ${new Date().toLocaleString("en-GB")}
+  Submitted: ${new Date().toLocaleString("en-GB")}
+</p>
+
+<hr style="margin:20px 0;" />
+
+<h2 style="color:#0B1F4D;">Recommended Action</h2>
+
+<p>
+  Contact this prospect within <strong>24 hours</strong>.
+</p>
+
+<p>
+  <strong>Email:</strong> ${email}<br />
+  <strong>Phone:</strong> ${phone}
+</p>
         </p>
       </div>
-
+      
       <div style="background:#0B1F4D;color:white;text-align:center;padding:20px;font-size:12px;">
         Corporate Cricket Collective™<br />
         Premium Corporate Cricket Experiences
