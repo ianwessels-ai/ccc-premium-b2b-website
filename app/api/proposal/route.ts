@@ -13,11 +13,12 @@ export async function POST(req: Request) {
     const budget = formData.get("budget");
     const message = formData.get("message");
 
-    const { data, error } = await resend.emails.send({
-      from: "CCC Website <onboarding@resend.dev>",
-      to: ["ian_wessels@icloud.com"],
-      subject: `New Proposal Request from ${company}`,
-      html: `
+      const { data, error } = await resend.emails.send({
+        from: "CCC Website <onboarding@resend.dev>",
+        to: ["ian_wessels@icloud.com"],
+        replyTo: email as string,
+        subject: `New Proposal Request from ${company}`,
+        html: ` 
         <h2>New Corporate Cricket Collective Enquiry</h2>
 
         <p><strong>Name:</strong> ${name}</p>
