@@ -89,6 +89,54 @@ const location = formData.get("location");
 }
 
 console.log("Email sent:", data);
+const { data: confirmationData, error: confirmationError } = await resend.emails.send({
+  from: "Corporate Cricket Collective <onboarding@resend.dev>",
+  to: [email as string],
+  replyTo: "ian_wessels@icloud.com",
+  subject: "Thank you for contacting Corporate Cricket Collective",
+  html: `
+    <div style="font-family: Arial, Helvetica, sans-serif; max-width: 650px; margin: 0 auto; color: #1f2937;">
+      <div style="background:#0B1F4D;padding:30px;text-align:center;">
+        <h1 style="color:white;margin:0;">Corporate Cricket Collective</h1>
+        <p style="color:#d1d5db;margin-top:10px;">Proposal Request Received</p>
+      </div>
+
+      <div style="padding:30px;background:#ffffff;">
+        <p>Hi ${name},</p>
+
+        <p>
+          Thank you for contacting Corporate Cricket Collective.
+          We have received your proposal request and will review your requirements.
+        </p>
+
+        <p>
+          A member of our team will contact you within <strong>1 business day</strong>
+          to discuss your objectives and next steps.
+        </p>
+
+        <p>
+          We look forward to helping you create a memorable corporate cricket
+          experience for your team.
+        </p>
+
+        <p style="margin-top:30px;">
+          Kind regards,<br />
+          <strong>Corporate Cricket Collective</strong>
+        </p>
+      </div>
+
+      <div style="background:#0B1F4D;color:white;text-align:center;padding:20px;font-size:12px;">
+        Corporate Cricket Collective™<br />
+        More Than A Game. A Stronger Workplace.
+      </div>
+    </div>
+  `,
+});
+
+if (confirmationError) {
+  console.error("Confirmation email error:", confirmationError);
+}
+console.log("Confirmation email sent:", confirmationData);
     return Response.json({ success: true });
   } catch (error) {
     console.error(error);
