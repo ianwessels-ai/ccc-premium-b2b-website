@@ -13,7 +13,7 @@ export async function POST(req: Request) {
     const budget = formData.get("budget");
     const message = formData.get("message");
 
-    await resend.emails.send({
+    const { data, error } = await resend.emails.send({
       from: "CCC Website <onboarding@resend.dev>",
       to: ["ian_wessels@icloud.com"],
       subject: `New Proposal Request from ${company}`,
@@ -30,7 +30,16 @@ export async function POST(req: Request) {
         <p>${message}</p>
       `,
     });
+    if (error) {
+  console.error("Resend error:", error);
 
+  return Response.json(
+    { success: false, error },
+    { status: 500 }
+  );
+}
+
+console.log("Email sent:", data);
     return Response.json({ success: true });
   } catch (error) {
     console.error(error);
