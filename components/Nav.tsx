@@ -12,7 +12,7 @@ const links = [
 export function Nav() {
   return (
     <header className="border-b border-slate-100 bg-white">
-  <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3"> 
+  <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-2"> 
     <Link href="/" className="flex items-center">
       <Image
         src="/logo.png"
