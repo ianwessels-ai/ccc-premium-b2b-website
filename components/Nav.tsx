@@ -11,7 +11,7 @@ const links = [
 
 export function Nav() {
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-100 bg-white/90 backdrop-blur">
+    <header className="border-b border-slate-100 bg-white">
   <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-7"> 
     <Link href="/" className="flex items-center">
       <Image
