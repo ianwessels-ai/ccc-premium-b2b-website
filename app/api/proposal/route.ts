@@ -90,7 +90,7 @@ const location = formData.get("location");
 
 console.log("Email sent:", data);
 const { data: confirmationData, error: confirmationError } = await resend.emails.send({
-  from: "Corporate Cricket Collective <onboarding@resend.dev>",
+  from: "Corporate Cricket Collective <proposals@corporatecricketcollective.com>",
   to: [email as string],
   replyTo: "ian_wessels@icloud.com",
   subject: "Thank you for contacting Corporate Cricket Collective",
