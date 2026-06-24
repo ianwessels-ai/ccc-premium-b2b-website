@@ -32,7 +32,7 @@ export default function HomePage() {
       <Nav />
 
       <main>
-        <section className="bg-white px-6 py-20 md:py-28">
+        <section className="bg-white px-6 py-8 md:py-10">
           <Container>
             <div className="grid items-center gap-16 md:grid-cols-[1fr_1fr]">
               <div>
