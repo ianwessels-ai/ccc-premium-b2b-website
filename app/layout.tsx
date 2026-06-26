@@ -69,7 +69,38 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <body>
+  <script
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{
+      __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        name: "Corporate Cricket Collective",
+        url: "https://corporatecricketcollective.com",
+        logo: "https://corporatecricketcollective.com/logo.png",
+        description:
+          "Corporate Cricket Collective delivers premium corporate cricket experiences, executive networking events and team-building programmes across the Netherlands.",
+        areaServed: {
+          "@type": "Country",
+          name: "Netherlands",
+        },
+        sameAs: [],
+        contactPoint: {
+          "@type": "ContactPoint",
+          contactType: "Sales",
+          email: "ian_wessels@icloud.com",
+          areaServed: "NL",
+          availableLanguage: ["English"],
+        },
+      }),
+    }}
+  />
+
+  {children}
+</body>
+        {children}</body>
     </html>
   );
 }
