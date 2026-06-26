@@ -15,7 +15,6 @@ export function Nav() {
   <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3">
     <Link href="/" className="flex items-center">
       <Image
-        <Image
   src="/logo.png"
   alt="Corporate Cricket Collective"
   width={340}
