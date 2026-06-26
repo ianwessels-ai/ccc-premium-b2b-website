@@ -40,9 +40,10 @@ export default function HomePage() {
                   Corporate Connection Through Cricket
                 </div>
 
-                <h1 className="text-5xl font-black leading-[0.95] tracking-tight text-navy md:text-6xl lg:text-7xl">
-                  <span className="block">More Than A Game.</span>
-                  <span className="block">A Stronger Workplace.</span>
+                <h1 className="text-5xl font-black leading-[0.95] tracking-tight text-navy md:text-7xl">
+                More Than A Game.
+                <br />
+                A Stronger Workplace.
                 </h1>
 
                 <p className="mt-7 max-w-lg text-lg leading-8 text-bodyText">
