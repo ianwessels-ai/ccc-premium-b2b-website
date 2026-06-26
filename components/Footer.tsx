@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export function Footer() {
@@ -5,11 +6,15 @@ export function Footer() {
     <footer className="border-t border-slate-100 bg-white">
       <div className="mx-auto grid max-w-7xl gap-10 px-6 py-14 md:grid-cols-4">
         <div className="md:col-span-2">
-          <h3 className="text-2xl font-black text-navy">CCC</h3>
+          <Image
+          src="/logo.png"
+          alt="Corporate Cricket Collective"
+          width={260}
+           height={80}
+           className="h-auto w-[240px]"
+/>
           <p className="mt-4 max-w-md text-sm leading-6 text-bodyText">
-            A premium business community that strengthens workplace culture,
-            team connection, and professional relationships through
-            cricket-inspired corporate experiences.
+            We design premium corporate cricket experiences that strengthen workplace culture, build meaningful business relationships, and create unforgettable team moments.
           </p>
         </div>
         <div>
