@@ -17,7 +17,7 @@ export function Nav() {
       <Image
         src="/logo.png"
         alt="Corporate Cricket Collective"
-        width={260}
+        width={290}
         height={80}
         priority
         className="h-auto w-[220px] md:w-[260px]"
