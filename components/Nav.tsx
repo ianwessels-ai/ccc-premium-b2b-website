@@ -12,14 +12,15 @@ const links = [
 export function Nav() {
   return (
     <header className="border-b border-slate-100 bg-white">
-  <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-2"> 
+  <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3">
     <Link href="/" className="flex items-center">
       <Image
         src="/logo.png"
         alt="Corporate Cricket Collective"
-        width={400}
-        height={120}
+        width={260}
+        height={80}
         priority
+        className="h-auto w-[220px] md:w-[260px]"
       />
     </Link>
 
@@ -28,7 +29,7 @@ export function Nav() {
         <Link
           key={link.href}
           href={link.href}
-          className="text-sm font-bold text-navy transition hover:text-gold"
+          className="text-sm font-bold text-navy transition duration-200 hover:text-gold"
         >
           {link.label}
         </Link>
@@ -37,7 +38,7 @@ export function Nav() {
 
     <Link
       href="/proposal"
-      className="rounded-full bg-gold px-5 py-3 text-sm font-bold text-navy shadow-premium transition hover:-translate-y-0.5"
+      className="rounded-full bg-gold px-6 py-3 text-sm font-black text-navy shadow-premium transition duration-200 hover:-translate-y-0.5 hover:brightness-95"
     >
       Request A Proposal
     </Link>
