@@ -1,30 +1,65 @@
 import type { Metadata } from "next";
+// @ts-ignore: CSS side-effect import without type declarations
 import "./globals.css";
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.corporatecricketcollective.com"),
-  title: "Cricket Corporate Collective | Premium Corporate Cricket Experiences",
-  description:
-    "Premium cricket-based corporate experiences for stronger teams, executive networking and workplace culture.",
+  metadataBase: new URL("https://corporatecricketcollective.com"),
 
-  icons: {
-    icon: "/favicon.png",
+  title: {
+    default: "Corporate Cricket Collective | Premium Corporate Team Building in the Netherlands",
+    template: "%s | Corporate Cricket Collective",
+  },
+
+  description:
+    "Corporate Cricket Collective delivers premium corporate cricket experiences, executive networking events and team-building programmes that strengthen workplace culture and create meaningful business connections across the Netherlands.",
+
+  keywords: [
+    "Corporate Cricket",
+    "Corporate Team Building",
+    "Corporate Events Netherlands",
+    "Corporate Team Building Amsterdam",
+    "Executive Networking",
+    "Employee Engagement",
+    "Workplace Culture",
+    "Business Networking Events",
+    "Cricket Team Building",
+    "Corporate Hospitality",
+  ],
+
+  authors: [{ name: "Corporate Cricket Collective" }],
+
+  creator: "Corporate Cricket Collective",
+
+  publisher: "Corporate Cricket Collective",
+
+  robots: {
+    index: true,
+    follow: true,
   },
 
   openGraph: {
-    title: "Cricket Corporate Collective",
+    type: "website",
+    locale: "en_NL",
+    url: "https://corporatecricketcollective.com",
+    siteName: "Corporate Cricket Collective",
+    title: "Corporate Cricket Collective | Premium Corporate Team Building in the Netherlands",
     description:
-      "Premium corporate cricket experiences designed to strengthen teams, culture and business relationships.",
-    url: "https://www.corporatecricketcollective.com",
-    siteName: "Cricket Corporate Collective",
+      "Premium corporate cricket experiences that strengthen teams, build workplace culture and create meaningful business connections.",
     images: [
       {
-        url: "/images/hero-corporate-cricket.jpg",
+        url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Corporate Cricket Collective experience",
+        alt: "Corporate Cricket Collective",
       },
     ],
-    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Corporate Cricket Collective",
+    description:
+      "Premium corporate cricket experiences across the Netherlands.",
+    images: ["/og-image.jpg"],
   },
 };
 export default function RootLayout({
