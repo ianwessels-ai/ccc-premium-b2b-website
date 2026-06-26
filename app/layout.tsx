@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-// @ts-ignore: CSS side-effect import without type declarations
 import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://corporatecricketcollective.com"),
@@ -70,7 +69,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <body>
+
+
   <script
     type="application/ld+json"
     dangerouslySetInnerHTML={{
@@ -100,7 +100,6 @@ export default function RootLayout({
 
   {children}
 </body>
-        {children}</body>
     </html>
   );
 }
