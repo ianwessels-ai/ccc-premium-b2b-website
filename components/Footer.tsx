@@ -13,7 +13,7 @@ export function Footer() {
            height={80}
            className="h-auto w-[240px]"
 />
-          <p className="mt-4 max-w-md text-sm leading-6 text-bodyText">
+          <p className="mt-1 max-w-md text-sm leading-6 text-bodyText">
             We design premium corporate cricket experiences that strengthen workplace culture, build meaningful business relationships, and create unforgettable team moments.
           </p>
         </div>
@@ -32,9 +32,6 @@ export function Footer() {
   <p className="mt-4 text-sm text-bodyText">
     North Holland, Netherlands
     </p>
-  <p className="mt-4 text-sm text-bodyText">
-  KVK: To be added
-</p>
 </div>
         </div>
       </div>
