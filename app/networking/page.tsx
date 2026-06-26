@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Executive Networking Events",
+  title: "Executive Networking Events | Netherlands",
   description:
     "Premium executive networking events that combine cricket, business relationships and memorable corporate experiences for professionals across the Netherlands.",
 };

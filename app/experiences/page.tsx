@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Corporate Team Building Experiences",
+  title: "Corporate Team Building Experiences | Netherlands",
   description:
     "Discover premium corporate cricket experiences designed to strengthen teams, improve workplace culture, and create meaningful business connections across the Netherlands.",
 };
