@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://www.corporatecricketcollective.com/sitemap.xml",
+    sitemap: "https://corporatecricketcollective.com/sitemap.xml",
   };
 }
