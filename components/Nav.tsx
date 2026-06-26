@@ -29,7 +29,7 @@ export function Nav() {
         <Link
           key={link.href}
           href={link.href}
-          className="text-sm font-bold text-navy transition duration-200 hover:text-gold"
+          className="relative text-sm font-semibold text-navy transition-all duration-300 hover:text-gold after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-gold after:transition-all after:duration-300 hover:after:w-full"
         >
           {link.label}
         </Link>
@@ -38,7 +38,7 @@ export function Nav() {
 
     <Link
       href="/proposal"
-      className="rounded-full bg-gold px-6 py-3 text-sm font-black text-navy shadow-premium transition duration-200 hover:-translate-y-0.5 hover:brightness-95"
+      className="rounded-full bg-gold px-7 py-3.5 text-sm font-black text-navy shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:brightness-95"
     >
       Request A Proposal
     </Link>
