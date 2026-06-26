@@ -34,7 +34,7 @@ export default function HomePage() {
       <main>
         <section className="bg-white px-6 py-8 md:py-10">
           <Container>
-            <div className="grid items-center gap-16 md:grid-cols-[1fr_1fr]">
+            <div className="grid items-center gap-12 md:grid-cols-[0.85fr_1.15fr]">
               <div>
                 <div className="mb-6 inline-flex rounded-full border border-gold/40 bg-gold/10 px-4 py-2 text-xs font-black uppercase tracking-[0.22em] text-navy">
                   Corporate Connection Through Cricket
@@ -65,7 +65,7 @@ export default function HomePage() {
                 </div>
               </div>
 
-              <div className="rounded-[2rem] bg-slateCanvas p-4 shadow-premium">
+              <div className="rounded-[2rem] bg-slateCanvas p-1 shadow-premium">
                 <div className="relative aspect-[3/4] overflow-hidden rounded-[1.5rem]">
                   <Image
                     src="/images/hero-corporate-cricket.jpg"
