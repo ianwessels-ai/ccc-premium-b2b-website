@@ -1,3 +1,10 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Corporate Team Building Experiences",
+  description:
+    "Discover premium corporate cricket experiences designed to strengthen teams, improve workplace culture, and create meaningful business connections across the Netherlands.",
+};
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { Container, Section } from "@/components/Section";

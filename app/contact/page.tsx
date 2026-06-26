@@ -1,3 +1,10 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact Corporate Cricket Collective",
+  description:
+    "Contact Corporate Cricket Collective to discuss premium corporate cricket experiences, executive networking events and customised team-building programmes.",
+};
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { Container, Section } from "@/components/Section";

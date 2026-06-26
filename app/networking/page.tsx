@@ -1,3 +1,10 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Executive Networking Events",
+  description:
+    "Premium executive networking events that combine cricket, business relationships and memorable corporate experiences for professionals across the Netherlands.",
+};
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { Container, Section } from "@/components/Section";

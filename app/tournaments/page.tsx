@@ -1,3 +1,10 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Corporate Cricket Tournaments",
+  description:
+    "Professionally organised corporate cricket tournaments that promote teamwork, collaboration and employee engagement through premium sporting experiences.",
+};
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { Container, Section } from "@/components/Section";
