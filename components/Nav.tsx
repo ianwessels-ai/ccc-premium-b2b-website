@@ -15,13 +15,14 @@ export function Nav() {
   <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3">
     <Link href="/" className="flex items-center">
       <Image
-        src="/logo.png"
-        alt="Corporate Cricket Collective"
-        width={310}
-        height={100}
-        priority
-        className="h-auto w-[220px] md:w-[260px]"
-      />
+        <Image
+  src="/logo.png"
+  alt="Corporate Cricket Collective"
+  width={340}
+  height={110}
+  priority
+  className="h-auto w-[260px] md:w-[340px]"
+/>
     </Link>
 
     <nav className="hidden items-center gap-8 md:flex">
