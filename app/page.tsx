@@ -1,4 +1,6 @@
 import Image from "next/image";
+import { Nav } from "@/components/Nav";
+import { Footer } from "@/components/Footer";
 import { Container, Section } from "@/components/Section";
 import { PrimaryCTA, SecondaryCTA } from "@/components/CTA";
 
@@ -27,6 +29,7 @@ const challenges = [
 export default function HomePage() {
   return (
     <>
+      <Nav />
 
       <main>
         <section className="bg-white px-6 py-8 md:py-10">
@@ -41,7 +44,7 @@ export default function HomePage() {
                 More Than A Game.
                 <br />
                 A Stronger Workplace.
-                </h1>
+</h1>
 
                 <p className="mt-7 max-w-lg text-lg leading-8 text-bodyText">
                   We help organisations build stronger teams, meaningful business
@@ -528,7 +531,7 @@ export default function HomePage() {
 </Section>
       </main>
 
-    
+      <Footer />
     </>
   );
 }
