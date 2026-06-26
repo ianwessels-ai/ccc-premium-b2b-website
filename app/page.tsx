@@ -72,7 +72,7 @@ export default function HomePage() {
                     alt="Corporate professionals connecting through a premium cricket experience"
                     fill
                     priority
-                    className="object-cover"
+                    className="object-cover transition duration-500 hover:scale-[1.02]"
                   />
                 </div>
               </div>
