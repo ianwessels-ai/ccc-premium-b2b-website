@@ -40,18 +40,18 @@ export default function HomePage() {
                   Corporate Connection Through Cricket
                 </div>
 
-                <h1 className="text-4xl font-black leading-tight tracking-tight text-navy md:text-6xl lg:text-7xl">
+                <h1 className="text-5xl font-black leading-[0.95] tracking-tight text-navy md:text-6xl lg:text-7xl">
                   <span className="block">More Than A Game.</span>
                   <span className="block">A Stronger Workplace.</span>
                 </h1>
 
-                <p className="mt-7 max-w-xl text-lg leading-8 text-bodyText">
+                <p className="mt-7 max-w-lg text-lg leading-8 text-bodyText">
                   We help organisations build stronger teams, meaningful business
                   relationships, and engaged workplace cultures through premium
                   corporate cricket experiences.
                 </p>
 
-                <div className="mt-9 flex flex-col gap-4 sm:flex-row">
+                <div className="mt-12 flex flex-col gap-4 sm:flex-row">
                   <PrimaryCTA />
                   <SecondaryCTA href="/experiences">
                     Explore Experiences
