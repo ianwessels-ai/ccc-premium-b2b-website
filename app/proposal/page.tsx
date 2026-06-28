@@ -73,6 +73,13 @@ export default function ProposalPage() {
                 onSubmit={handleSubmit}
                 className="rounded-[2rem] bg-white p-8 shadow-premium"
               >
+                <input
+  type="text"
+  name="website"
+  autoComplete="off"
+  tabIndex={-1}
+  className="hidden"
+/>
                 <div className="grid gap-5 md:grid-cols-2">
                   <label className="text-sm font-bold text-navy">
                     Full Name

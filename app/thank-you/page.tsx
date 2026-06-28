@@ -38,9 +38,12 @@ export default function ThankYouPage() {
               </div>
 
               <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
-                <PrimaryCTA>
-                  <a href="/proposal">Request Another Proposal</a>
-                </PrimaryCTA>
+                <a
+  href="/proposal"
+  className="inline-flex rounded-full bg-gold px-7 py-4 text-sm font-black text-navy shadow-premium transition hover:brightness-95"
+>
+  Request Another Proposal
+</a>
 
                 <SecondaryCTA href="/">
                   <a href="/">Back To Homepage</a>
