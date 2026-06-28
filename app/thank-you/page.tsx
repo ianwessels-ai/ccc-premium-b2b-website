@@ -39,11 +39,11 @@ export default function ThankYouPage() {
 
               <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
                 <PrimaryCTA>
-                  Request Another Proposal
+                  <a href="/proposal">Request Another Proposal</a>
                 </PrimaryCTA>
 
                 <SecondaryCTA href="/">
-                  Back To Homepage
+                  <a href="/">Back To Homepage</a>
                 </SecondaryCTA>
               </div>
 
