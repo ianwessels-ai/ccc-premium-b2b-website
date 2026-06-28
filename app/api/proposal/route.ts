@@ -47,7 +47,22 @@ if (!turnstileResult.success) {
     const participants = formData.get("participants");
     const budget = formData.get("budget");
     const message = formData.get("message");
-    const messageText = String(message || "").toLowerCase();
+    const phone = formData.get("phone");
+const eventDate = formData.get("date");
+const location = formData.get("location");
+   const submittedText = [
+  name,
+  company,
+  email,
+  phone,
+  participants,
+  budget,
+  message,
+  eventDate,
+  location,
+]
+  .map((value) => String(value || "").toLowerCase())
+  .join(" ");
 
 const spamWords = [
   "seo",
@@ -62,14 +77,31 @@ const spamWords = [
   "whatsapp",
   "guest post",
   "web designing",
+  "web design",
+  "website redesign",
+  "marketing agency",
+  "search engine",
+  "domain authority",
 ];
 
-if (spamWords.some((word) => messageText.includes(word))) {
+const containsSpamWord = spamWords.some((word) =>
+  submittedText.includes(word)
+);
+
+const containsUrl =
+  submittedText.includes("http://") ||
+  submittedText.includes("https://") ||
+  submittedText.includes("www.");
+
+if (containsSpamWord || containsUrl) {
+  console.log("Blocked spam proposal submission:", {
+    email: String(email || ""),
+    company: String(company || ""),
+    reason: containsSpamWord ? "spam keyword" : "url detected",
+  });
+
   return Response.json({ success: true });
-}
-    const phone = formData.get("phone");
-const eventDate = formData.get("date");
-const location = formData.get("location");
+} 
 
       const { data, error } = await resend.emails.send({
   from: "CCC Website <onboarding@resend.dev>",
