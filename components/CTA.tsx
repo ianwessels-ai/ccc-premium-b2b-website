@@ -2,12 +2,12 @@ import Link from "next/link";
 
 export function PrimaryCTA({ children = "Request A Proposal" }: { children?: React.ReactNode }) {
   return (
-    <Link
+    <a
       href="/proposal"
       className="inline-flex rounded-full bg-gold px-7 py-4 text-sm font-black text-navy shadow-premium transition hover:brightness-95"
     >
       {children}
-    </Link>
+    </a>
   );
 }
 
