@@ -5,13 +5,68 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 export async function POST(req: Request) {
   try {
     const formData = await req.formData();
+    const honeypot = formData.get("website");
+const turnstileToken = formData.get("cf-turnstile-response");
 
+if (honeypot) {
+  return Response.json({ success: true });
+}
+
+if (!turnstileToken) {
+  return Response.json(
+    { success: false, error: "Turnstile token missing" },
+    { status: 400 }
+  );
+}
+
+const turnstileResponse = await fetch(
+  "https://challenges.cloudflare.com/turnstile/v0/siteverify",
+  {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/x-www-form-urlencoded",
+    },
+    body: new URLSearchParams({
+      secret: process.env.TURNSTILE_SECRET_KEY as string,
+      response: turnstileToken as string,
+    }),
+  }
+);
+
+const turnstileResult = await turnstileResponse.json();
+
+if (!turnstileResult.success) {
+  return Response.json(
+    { success: false, error: "Turnstile verification failed" },
+    { status: 400 }
+  );
+}
     const name = formData.get("name");
     const company = formData.get("company");
     const email = formData.get("email");
     const participants = formData.get("participants");
     const budget = formData.get("budget");
     const message = formData.get("message");
+    const messageText = String(message || "").toLowerCase();
+
+const spamWords = [
+  "seo",
+  "ppc",
+  "smo",
+  "backlinks",
+  "google ranking",
+  "first page",
+  "rank higher",
+  "digital marketing",
+  "link building",
+  "whatsapp",
+  "guest post",
+  "web designing",
+];
+
+if (spamWords.some((word) => messageText.includes(word))) {
+  return Response.json({ success: true });
+}
     const phone = formData.get("phone");
 const eventDate = formData.get("date");
 const location = formData.get("location");

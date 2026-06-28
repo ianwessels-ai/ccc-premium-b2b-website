@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-
+import Script from "next/script";
 export const metadata: Metadata = {
   title: "Contact Corporate Cricket Collective | Netherlands",
   description:
@@ -12,8 +12,15 @@ import { Container, Section } from "@/components/Section";
 export default function ContactPage() {
   return (
     <>
-      <Nav />
-      <main>
+  <Nav />
+
+  <Script
+    src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+    async
+    defer
+  />
+
+  <main>
         <Section className="bg-slateCanvas">
           <Container>
             <div className="grid gap-12 md:grid-cols-[0.9fr_1.1fr]">
@@ -37,6 +44,13 @@ export default function ContactPage() {
               </div>
 
               <form action="/api/proposal" method="POST" className="rounded-[2rem] bg-white p-8 shadow-premium">
+              <input
+                type="text"
+                name="website"
+                autoComplete="off"
+                tabIndex={-1}
+                className="hidden"
+              />
                 <div className="grid gap-5 md:grid-cols-2">
                   {[
                     ["name", "Full Name"],
@@ -78,7 +92,10 @@ export default function ContactPage() {
                   Message
                   <textarea name="message" rows={5} className="mt-2 w-full rounded-xl border border-slate-200 px-4 py-3 outline-none focus:border-gold" />
                 </label>
-
+                 <div
+                 className="cf-turnstile mt-6"
+                 data-sitekey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY}
+                  />
                 <button className="mt-7 w-full rounded-full bg-gold px-7 py-4 text-sm font-black text-navy shadow-premium transition hover:brightness-95">
                   Request My Proposal
                 </button>
