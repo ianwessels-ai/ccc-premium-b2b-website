@@ -1,5 +1,5 @@
 "use client";
-
+import Script from "next/script";
 import { useRouter } from "next/navigation";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
@@ -33,7 +33,11 @@ export default function ProposalPage() {
   return (
     <>
       <Nav />
-
+      <Script
+  src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+  async
+  defer
+/>
       <main>
         <Section className="bg-slateCanvas">
           <Container>
@@ -188,6 +192,10 @@ export default function ProposalPage() {
                  type="submit"
                 className="mt-7 w-full rounded-full bg-gold px-7 py-4 text-sm font-black text-navy shadow-premium transition hover:brightness-95"
                 >
+                <div
+  className="cf-turnstile mt-6"
+  data-sitekey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY}
+/>  
                 Request My Proposal
               </button>
               </form>
