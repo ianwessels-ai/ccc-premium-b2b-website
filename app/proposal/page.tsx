@@ -187,15 +187,16 @@ export default function ProposalPage() {
                     className="mt-2 w-full rounded-xl border border-slate-200 px-4 py-3 outline-none focus:border-gold"
                   />
                 </label>
-
+                <div className="mt-6 flex justify-center">
+  <div
+    className="cf-turnstile"
+    data-sitekey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY}
+  />
+</div>
                 <button
                  type="submit"
-                className="mt-7 w-full rounded-full bg-gold px-7 py-4 text-sm font-black text-navy shadow-premium transition hover:brightness-95"
+                className="mt-4 w-full rounded-full bg-gold px-7 py-4 text-sm font-black text-navy shadow-premium transition hover:brightness-95"
                 >
-                <div
-  className="cf-turnstile mt-6"
-  data-sitekey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY}
-/>  
                 Request My Proposal
               </button>
               </form>
