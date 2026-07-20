@@ -1,46 +1,58 @@
 import Image from "next/image";
+import Link from "next/link";
 
-const links = [
-  { href: "/", label: "Home" },
-  { href: "/experiences", label: "Experiences" },
-  { href: "/networking", label: "Networking" },
-  { href: "/tournaments", label: "Tournaments" },
-  { href: "/contact", label: "Contact" },
-];
-
-export function Nav() {
+export default function Nav() {
   return (
-    <header className="border-b border-slate-100 bg-white">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3">
-        <a href="/" className="flex items-center">
+    <header className="fixed inset-x-0 top-0 z-50 px-4 pt-4 sm:px-6 sm:pt-5">
+      <div className="mx-auto flex max-w-7xl items-center justify-between rounded-full border border-white/15 bg-slate-950/55 px-5 py-2 text-white shadow-xl backdrop-blur-2xl sm:px-7">
+        <Link
+          href="/"
+          aria-label="Corporate Cricket Collective homepage"
+          className="shrink-0"
+        >
           <Image
             src="/logo.png"
             alt="Corporate Cricket Collective"
-            width={380}
-            height={110}
+            width={155}
+            height={50}
             priority
-            className="h-auto w-[260px] md:w-[340px]"
+            className="h-auto w-[135px] sm:w-[155px]"
           />
-        </a>
+        </Link>
 
-        <nav className="hidden items-center gap-8 md:flex">
-          {links.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="relative text-sm font-semibold text-navy transition-all duration-300 hover:text-gold after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-gold after:transition-all after:duration-300 hover:after:w-full"
-            >
-              {link.label}
-            </a>
-          ))}
+        <nav
+          aria-label="Main navigation"
+          className="hidden items-center gap-8 md:flex"
+        >
+          <Link
+            href="/#experiences"
+            className="text-sm font-semibold tracking-wide text-white/75 transition hover:text-white"
+          >
+            Experiences
+          </Link>
+
+          <Link
+            href="/#why-ccc"
+            className="text-sm font-semibold tracking-wide text-white/75 transition hover:text-white"
+          >
+            Why CCC
+          </Link>
+
+          <Link
+            href="/contact"
+            className="text-sm font-semibold tracking-wide text-white/75 transition hover:text-white"
+          >
+            Contact
+          </Link>
         </nav>
 
-        <a
-          href="/proposal"
-          className="rounded-full bg-gold px-7 py-3.5 text-sm font-black text-navy shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:brightness-95"
+        <Link
+          href="/contact"
+          className="rounded-full bg-amber-400 px-5 py-2.5 text-xs font-black uppercase tracking-wide text-slate-950 transition duration-300 hover:-translate-y-0.5 hover:bg-amber-300 sm:px-6"
         >
-          Request A Proposal
-        </a>
+          <span className="hidden sm:inline">Book Your Experience</span>
+          <span className="sm:hidden">Book</span>
+        </Link>
       </div>
     </header>
   );
