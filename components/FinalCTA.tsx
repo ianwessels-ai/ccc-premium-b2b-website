@@ -33,12 +33,7 @@ export default function FinalCTA() {
             Start Planning
           </Link>
 
-          <Link
-            href="#experiences"
-            className="rounded-full border border-white/30 px-10 py-5 text-sm font-black uppercase tracking-wide transition duration-300 hover:border-white hover:bg-white hover:text-slate-950"
-          >
-            Explore Experiences
-          </Link>
+        
         </div>
 
         <div className="mt-16 flex flex-wrap justify-center gap-8 text-sm font-semibold text-slate-400">
