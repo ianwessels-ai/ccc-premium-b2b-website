@@ -51,10 +51,10 @@ export default function Footer() {
 
             <div className="mt-5 grid gap-3 text-slate-400">
               <a
-                href="mailto:hello@corporatecricketcollective.com"
+                href="mailto:ian_wessels@icloud.com"
                 className="hover:text-white"
               >
-                ian_wessels@icloud.com
+                hello@corporatecricketcollective.com
               </a>
 
               <p>Amsterdam, The Netherlands</p>
