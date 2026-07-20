@@ -1,12 +1,11 @@
-import { Nav } from "@/components/Nav";
-import { Footer } from "@/components/Footer";
+
 import { Container, Section } from "@/components/Section";
 import { PrimaryCTA, SecondaryCTA } from "@/components/CTA";
 
 export default function ThankYouPage() {
   return (
     <>
-      <Nav />
+  
 
       <main>
         <Section className="bg-slateCanvas">
@@ -55,7 +54,7 @@ export default function ThankYouPage() {
         </Section>
       </main>
 
-      <Footer />
+   
     </>
   );
 }

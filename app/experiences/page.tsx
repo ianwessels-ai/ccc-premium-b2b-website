@@ -5,15 +5,14 @@ export const metadata: Metadata = {
   description:
     "Discover premium corporate cricket experiences designed to strengthen teams, improve workplace culture, and create meaningful business connections across the Netherlands.",
 };
-import { Nav } from "@/components/Nav";
-import { Footer } from "@/components/Footer";
+
 import { Container, Section } from "@/components/Section";
 import { PrimaryCTA } from "@/components/CTA";
 
 export default function Page() {
   return (
     <>
-      <Nav />
+      
       <main>
         <Section className="bg-white">
           <Container>
@@ -28,7 +27,7 @@ export default function Page() {
           </Container>
         </Section>
       </main>
-      <Footer />
+    
     </>
   );
 }

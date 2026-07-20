@@ -1,8 +1,9 @@
 "use client";
 import Script from "next/script";
 import { useRouter } from "next/navigation";
-import { Nav } from "@/components/Nav";
-import { Footer } from "@/components/Footer";
+import Nav from "@/components/Nav";
+import Footer from "@/components/Footer";
+
 import { Container, Section } from "@/components/Section";
 
 export default function ProposalPage() {
@@ -32,7 +33,7 @@ export default function ProposalPage() {
 
   return (
     <>
-      <Nav />
+      
       <Script
   src="https://challenges.cloudflare.com/turnstile/v0/api.js"
   async
@@ -212,7 +213,7 @@ export default function ProposalPage() {
         </Section>
       </main>
 
-      <Footer />
+      
     </>
   );
 }

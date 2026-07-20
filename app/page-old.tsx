@@ -1,6 +1,4 @@
 import Image from "next/image";
-import { Nav } from "@/components/Nav";
-import { Footer } from "@/components/Footer";
 import { Container, Section } from "@/components/Section";
 import { PrimaryCTA, SecondaryCTA } from "@/components/CTA";
 
@@ -29,7 +27,7 @@ const challenges = [
 export default function HomePage() {
   return (
     <>
-      <Nav />
+    
 
       <main>
         <section className="bg-white px-6 py-8 md:py-10">
@@ -531,7 +529,7 @@ export default function HomePage() {
 </Section>
       </main>
 
-      <Footer />
+    
     </>
   );
 }

@@ -5,14 +5,12 @@ export const metadata: Metadata = {
   description:
     "Contact Corporate Cricket Collective to discuss premium corporate cricket experiences, executive networking events and customised team-building programmes.",
 };
-import { Nav } from "@/components/Nav";
-import { Footer } from "@/components/Footer";
 import { Container, Section } from "@/components/Section";
 
 export default function ContactPage() {
   return (
     <>
-  <Nav />
+  
 
   <Script
     src="https://challenges.cloudflare.com/turnstile/v0/api.js"
@@ -105,8 +103,7 @@ export default function ContactPage() {
             </div>
           </Container>
         </Section>
-      </main>
-      <Footer />
+      </main>  
     </>
   );
 }

@@ -8,7 +8,7 @@ export default function Hero() {
         aria-hidden="true"
       />
 
-      <div className="absolute inset-0 bg-gradient-to-r from-slate-950/95 via-slate-950/55 to-transparent" /> />
+      <div className="absolute inset-0 bg-gradient-to-r from-slate-950/95 via-slate-950/55 to-transparent" />
 
       <div className="relative mx-auto flex min-h-[92vh] max-w-7xl items-center px-6 py-24">
         <div className="max-w-4xl">

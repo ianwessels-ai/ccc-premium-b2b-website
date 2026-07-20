@@ -5,15 +5,13 @@ export const metadata: Metadata = {
   description:
     "Premium executive networking events that combine cricket, business relationships and memorable corporate experiences for professionals across the Netherlands.",
 };
-import { Nav } from "@/components/Nav";
-import { Footer } from "@/components/Footer";
 import { Container, Section } from "@/components/Section";
 import { PrimaryCTA } from "@/components/CTA";
 
 export default function Page() {
   return (
     <>
-      <Nav />
+    
       <main>
         <Section className="bg-white">
           <Container>
@@ -28,7 +26,7 @@ export default function Page() {
           </Container>
         </Section>
       </main>
-      <Footer />
+    
     </>
   );
 }

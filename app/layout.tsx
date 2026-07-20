@@ -97,10 +97,10 @@ export default function RootLayout({
             __html: JSON.stringify(organizationJsonLd),
           }}
         />
-         <Nav />
+        <Nav/>
         {children}
 
-        <Footer />
+        <Footer/>
       </body>
     </html>
   );
