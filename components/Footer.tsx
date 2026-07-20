@@ -69,7 +69,7 @@ export default function Footer() {
               </a>
 
               <a
-                href="https://www.instagram.com"
+                href="https://www.instagram.com/corporatecricketcollective?igsh=ZzNpb3JhM3d2bzB2&ut-m_source=qr"
                 target="_blank"
                 rel="noreferrer"
                 className="hover:text-white"
