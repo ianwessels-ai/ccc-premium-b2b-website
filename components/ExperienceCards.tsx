@@ -1,4 +1,4 @@
-import Link from "next/link";
+
 
 const experiences = [
   {
@@ -58,11 +58,11 @@ export default function ExperienceCards() {
 
         <div className="mt-14 grid gap-8 lg:grid-cols-3">
           {experiences.map((experience) => (
-            <Link
-              key={experience.name}
-              href={experience.href}
-              className="group block overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-2 hover:border-amber-400 hover:shadow-2xl"
-            >
+            <article
+  key={experience.name}
+  tabIndex={0}
+  className="group overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-2 hover:border-amber-400 hover:shadow-2xl focus:-translate-y-2 focus:border-amber-400 focus:shadow-2xl focus:outline-none active:-translate-y-1"
+>
               <div className="overflow-hidden">
                 <div className="h-72 bg-[url('/hero-cricket.jpg')] bg-cover bg-center transition duration-700 group-hover:scale-105" />
               </div>
@@ -94,16 +94,13 @@ export default function ExperienceCards() {
                   <p>🏏 {experience.format}</p>
                 </div>
 
-                <div className="mt-8 flex items-center justify-between border-t border-slate-200 pt-6">
-                  <span className="text-sm font-black uppercase tracking-wide text-slate-950">
-                    Explore Experience
-                  </span>
-                  <span className="text-xl text-amber-500 transition group-hover:translate-x-2">
-                    →
-                  </span>
-                </div>
+                <div className="mt-8 border-t border-slate-200 pt-6">
+  <span className="text-sm font-black uppercase tracking-wide text-slate-950">
+    Premium team experience
+  </span>
+</div>
               </div>
-            </Link>
+            </article>
           ))}
         </div>
       </div>
