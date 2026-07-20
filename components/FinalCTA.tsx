@@ -30,7 +30,7 @@ export default function FinalCTA() {
             href="/contact"
             className="rounded-full bg-amber-400 px-10 py-5 text-sm font-black uppercase tracking-wide text-slate-950 transition duration-300 hover:scale-105 hover:bg-amber-300"
           >
-            Book A Discovery Call
+            Start Planning
           </Link>
 
           <Link
