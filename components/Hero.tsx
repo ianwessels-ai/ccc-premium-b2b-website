@@ -2,16 +2,18 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[92vh] overflow-hidden bg-slate-950 text-white">
+    <section className="relative min-h-[92vh] w-full overflow-hidden bg-slate-950 text-white">
+    <div
+  className="absolute -inset-8 h-[104%] w-[104%] bg-[url('/hero-cricket-cinematic.png')] bg-cover bg-[55%_center] bg-no-repeat"
+/>
+
       <div
-        className="absolute inset-0 bg-[url('/hero-cricket-new.png')] bg-cover bg-center"
-        aria-hidden="true"
-      />
+  className="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/55 to-transparent"
+  aria-hidden="true"
+/>
 
-      <div className="absolute inset-0 bg-gradient-to-r from-slate-950/95 via-slate-950/55 to-transparent" />
-
-      <div className="relative mx-auto flex min-h-[92vh] max-w-7xl items-center px-6 py-24">
-        <div className="max-w-4xl">
+      <div className="relative flex min-h-[92vh] w-full items-center px-8 pb-16 pt-24 sm:px-12 lg:px-20">
+        <div className="max-w-3xl">
           <p className="mb-5 text-sm font-black uppercase tracking-[0.28em] text-amber-400">
             Corporate Cricket Collective
           </p>
