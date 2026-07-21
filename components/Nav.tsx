@@ -12,7 +12,7 @@ export default function Nav() {
   return (
     <header className="absolute inset-x-0 top-0 z-50 pt-4 sm:pt-5">
       <div className="mx-auto w-full max-w-6xl px-4 sm:px-6">
-        <nav className="relative flex items-center justify-between rounded-full border border-white/5 bg-slate-950/25 px-4 py-2.5 shadow-lg sm:px-6 sm:py-3">
+        <nav className="relative flex items-center justify-between bg-transparent px-0 py-2 sm:py-3">
           {/* Logo */}
           <Link
             href="/"
@@ -26,7 +26,7 @@ export default function Nav() {
               width={160}
               height={46}
               priority
-              className="h-auto w-[120px] sm:w-[145px] lg:w-[160px]"
+              className="h-auto w-[135px] sm:w-[150px] lg:w-[160px]"
             />
           </Link>
 
@@ -34,21 +34,21 @@ export default function Nav() {
           <div className="hidden items-center gap-10 md:flex">
             <Link
               href="/#experiences"
-              className="text-sm font-semibold text-white/85 transition hover:text-amber-400"
+              className="text-sm font-semibold text-white/90 transition hover:text-amber-400"
             >
               Experiences
             </Link>
 
             <Link
               href="/#why-ccc"
-              className="text-sm font-semibold text-white/85 transition hover:text-amber-400"
+              className="text-sm font-semibold text-white/90 transition hover:text-amber-400"
             >
               Why CCC
             </Link>
 
             <Link
               href="/contact"
-              className="text-sm font-semibold text-white/85 transition hover:text-amber-400"
+              className="text-sm font-semibold text-white/90 transition hover:text-amber-400"
             >
               Contact
             </Link>
@@ -62,11 +62,11 @@ export default function Nav() {
             Book Your Experience
           </Link>
 
-          {/* Mobile menu button */}
+          {/* Mobile hamburger button */}
           <button
             type="button"
             onClick={() => setMenuOpen((current) => !current)}
-            className="relative z-50 flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white md:hidden"
+            className="relative z-50 flex h-12 w-12 items-center justify-center rounded-full border border-white/25 bg-slate-950/20 text-white transition hover:bg-white/10 md:hidden"
             aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
             aria-expanded={menuOpen}
           >
@@ -76,19 +76,19 @@ export default function Nav() {
 
             <div className="flex flex-col gap-1.5">
               <span
-                className={`block h-0.5 w-5 bg-current transition duration-300 ${
+                className={`block h-0.5 w-6 bg-current transition duration-300 ${
                   menuOpen ? "translate-y-2 rotate-45" : ""
                 }`}
               />
 
               <span
-                className={`block h-0.5 w-5 bg-current transition duration-300 ${
+                className={`block h-0.5 w-6 bg-current transition duration-300 ${
                   menuOpen ? "opacity-0" : ""
                 }`}
               />
 
               <span
-                className={`block h-0.5 w-5 bg-current transition duration-300 ${
+                className={`block h-0.5 w-6 bg-current transition duration-300 ${
                   menuOpen ? "-translate-y-2 -rotate-45" : ""
                 }`}
               />
@@ -97,7 +97,7 @@ export default function Nav() {
 
           {/* Mobile dropdown */}
           <div
-            className={`absolute left-0 right-0 top-[calc(100%+0.75rem)] overflow-hidden rounded-3xl border border-white/10 bg-slate-950/95 shadow-2xl transition-all duration-300 md:hidden ${
+            className={`absolute left-0 right-0 top-[calc(100%+0.75rem)] z-40 overflow-hidden rounded-3xl border border-white/10 bg-slate-950/95 shadow-2xl transition-all duration-300 md:hidden ${
               menuOpen
                 ? "visible translate-y-0 opacity-100"
                 : "invisible -translate-y-3 opacity-0"
