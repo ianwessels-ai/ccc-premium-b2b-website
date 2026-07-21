@@ -1,20 +1,23 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Hero() {
   return (
     <section className="relative min-h-[100svh] overflow-hidden bg-slate-950 lg:min-h-[92vh]">
-      {/* Hero background image */}
-      <div
+      {/* Optimized hero background image */}
+      <Image
+        src="/hero-cricket-cinematic.webp"
+        alt=""
+        fill
+        priority
+        quality={82}
+        sizes="100vw"
         className="
-          absolute inset-0
-          h-full w-full
-          bg-[url('/hero-cricket-cinematic.webp')]
-          bg-cover
-          bg-[72%_center]
-          bg-no-repeat
-          sm:bg-[64%_center]
-          md:bg-[60%_center]
-          lg:bg-[55%_center]
+          object-cover
+          object-[72%_center]
+          sm:object-[64%_center]
+          md:object-[60%_center]
+          lg:object-[55%_center]
         "
         aria-hidden="true"
       />
@@ -22,7 +25,7 @@ export default function Hero() {
       {/* Dark overlay for text readability */}
       <div
         className="
-          absolute inset-0
+          absolute inset-0 z-[1]
           bg-gradient-to-r
           from-slate-950/95
           via-slate-950/70
