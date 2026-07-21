@@ -1,23 +1,7 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 
-// If the external ProposalForm component is missing, use a simple
-// inline fallback to avoid build errors. Replace with the real
-// component when available.
-function ProposalForm() {
-  return (
-    <div className="rounded-premium bg-white p-7 shadow-premium">
-      <h2 className="text-2xl font-black text-navy">Request a Proposal</h2>
-      <p className="mt-3 text-bodyText">Please provide your details and we will get back to you.</p>
-      <form className="mt-4 space-y-3">
-        <input className="w-full rounded border p-2" placeholder="Name" />
-        <input className="w-full rounded border p-2" placeholder="Email" />
-        <textarea className="w-full rounded border p-2" placeholder="Message" />
-        <button type="submit" className="rounded bg-navy px-4 py-2 text-white">Send</button>
-      </form>
-    </div>
-  );
-}
+import CCCProposalForm from "@/components/CCCProposalForm";
 import { Container, Section } from "@/components/Section";
 
 export const metadata: Metadata = {
@@ -63,7 +47,7 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              <ProposalForm />
+              <CCCProposalForm />
             </div>
           </Container>
         </Section>
