@@ -54,7 +54,7 @@ export default function Footer() {
                 href="mailto:ian_wessels@icloud.com"
                 className="hover:text-white"
               >
-                hello@corporatecricketcollective.com
+                Email Corporate Cricket Collective
               </a>
 
               <p>Amsterdam, The Netherlands</p>
