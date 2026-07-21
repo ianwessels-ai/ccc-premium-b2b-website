@@ -8,7 +8,7 @@ export default function Hero() {
         className="
           absolute inset-0
           h-full w-full
-          bg-[url('/hero-cricket-cinematic.png')]
+          bg-[url('/hero-cricket-cinematic.webp')]
           bg-cover
           bg-[72%_center]
           bg-no-repeat
