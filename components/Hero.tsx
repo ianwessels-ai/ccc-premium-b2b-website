@@ -39,15 +39,15 @@ export default function Hero() {
 
       {/* Hero content */}
       <div
-        className="
-          relative z-10
-          flex min-h-[100svh] w-full items-center
-          px-6 pb-14 pt-32
-          sm:px-10 sm:pb-16 sm:pt-32
-          md:px-12
-          lg:min-h-[92vh] lg:px-20 lg:pb-16 lg:pt-24
-        "
-      >
+  className="
+    relative z-10
+    flex min-h-[100svh] w-full items-center
+    px-6 pb-14 pt-40
+    sm:px-10 sm:pb-16 sm:pt-40
+    md:px-12 md:pt-44
+    lg:min-h-[92vh] lg:px-20 lg:pb-16 lg:pt-24
+  "
+>
         <div className="w-full max-w-3xl">
           <p className="mb-5 text-left text-sm font-black uppercase tracking-[0.28em] text-amber-400">
             Corporate Cricket Collective
