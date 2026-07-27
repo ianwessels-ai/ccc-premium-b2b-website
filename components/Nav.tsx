@@ -21,7 +21,7 @@ export default function Nav() {
             aria-label="Corporate Cricket Collective home"
           >
             <Image
-              src="/logo.png"
+              src="/logo-transparent.png"
               alt="Corporate Cricket Collective"
               width={160}
               height={46}
