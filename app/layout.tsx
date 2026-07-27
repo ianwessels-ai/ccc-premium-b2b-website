@@ -34,7 +34,16 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
-
+icons: {
+  icon: [
+    {
+      url: "/icon.png",
+      type: "image/png",
+    },
+  ],
+  shortcut: "/icon.png",
+  apple: "/icon.png",
+},
   openGraph: {
     type: "website",
     locale: "en_NL",
