@@ -45,7 +45,7 @@ export default function Hero() {
     px-6 pb-14 pt-40
     sm:px-10 sm:pb-16 sm:pt-40
     md:px-12 md:pt-44
-    lg:min-h-[92vh] lg:px-20 lg:pb-16 lg:pt-32
+    lg:min-h-[92vh] lg:px-20 lg:pb-16 lg:pt-40
   "
 >
         <div className="w-full max-w-3xl">
