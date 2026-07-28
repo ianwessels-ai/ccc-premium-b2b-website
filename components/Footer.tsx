@@ -79,8 +79,15 @@ export default function Footer() {
         </div>
 
         <div className="mt-14 border-t border-white/10 pt-8 text-sm text-slate-500">
-          © 2026 Corporate Cricket Collective™. All rights reserved.
-        </div>
+  <p>© 2026 Corporate Cricket Collective™. All rights reserved.</p>
+
+  <p className="mt-2">
+    KVK: <strong>42124948</strong>
+  </p>
+
+  {/* Add your VAT number here once received */}
+  {/* <p>VAT: NLXXXXXXXXXBXX</p> */}
+</div>
       </div>
     </footer>
   );
