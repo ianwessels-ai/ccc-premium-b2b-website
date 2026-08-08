@@ -29,13 +29,15 @@ export default function Footer() {
               <Link href="/" className="hover:text-white">
                 Home
               </Link>
+
               <Link href="/#experiences" className="hover:text-white">
                 Experiences
               </Link>
+
               <Link href="/contact" className="hover:text-white">
                 Contact
               </Link>
-              
+
               <Link href="/terms" className="hover:text-white">
                 Terms
               </Link>
@@ -78,15 +80,28 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-14 border-t border-white/10 pt-8 text-sm text-slate-500">
-  <p>© 2026 Corporate Cricket Collective™. All rights reserved.</p>
-
-  <p className="mt-2">
-    KVK: <strong>42124948</strong>
+        <div className="mt-14 border-t border-white/10 pt-8">
+  <p className="text-sm text-slate-500">
+    © 2026 Corporate Cricket Collective™. All rights reserved.
   </p>
 
-  {/* Add your VAT number here once received */}
-  {/* <p>VAT: NLXXXXXXXXXBXX</p> */}
+  <p className="mt-2 text-sm text-slate-500">
+    Registered in the Netherlands
+  </p>
+
+  <div className="mt-4 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-slate-400">
+    <p>
+      <span className="font-semibold text-white">KVK:</span>{" "}
+      <span>42124948</span>
+    </p>
+
+    <span className="hidden md:block text-slate-600">|</span>
+
+    <p>
+      <span className="font-semibold text-white">VAT:</span>{" "}
+      <span>NL005516965B39</span>
+    </p>
+  </div>
 </div>
       </div>
     </footer>
