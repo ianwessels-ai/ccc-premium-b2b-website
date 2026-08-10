@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="grid gap-12 md:grid-cols-4">
           <div className="md:col-span-2">
             <p className="text-2xl font-black">
-              Corporate Cricket Collective™
+              Corporate Cricket Collective
             </p>
 
             <p className="mt-4 max-w-md text-slate-400">
@@ -82,7 +82,7 @@ export default function Footer() {
 
         <div className="mt-14 border-t border-white/10 pt-8">
   <p className="text-sm text-slate-500">
-    © 2026 Corporate Cricket Collective™. All rights reserved.
+    © 2026 Corporate Cricket Collective. All rights reserved.
   </p>
 
   <p className="mt-2 text-sm text-slate-500">
