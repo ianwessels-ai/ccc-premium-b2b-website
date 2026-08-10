@@ -60,7 +60,7 @@ export default function Footer() {
               <p>Amsterdam, The Netherlands</p>
 
               <a
-                href="https://www.linkedin.com/corporate-cricket-collective"
+                href="https://www.linkedin.com/company/corporate-cricket-collective"
                 target="_blank"
                 rel="noreferrer"
                 className="hover:text-white"
