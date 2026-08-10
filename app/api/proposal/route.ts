@@ -105,7 +105,7 @@ if (containsSpamWord || containsUrl) {
 
       const { data, error } = await resend.emails.send({
   from: "CCC Website <onboarding@resend.dev>",
-  to: ["ian_wessels@icloud.com"],
+  to: ["hello@corporatecricketcollective.com"],
   replyTo: email as string,
   subject: '🏏 New Corporate Event Enquiry | ABC Company',
   html: `
