@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://corporatecricketcollective.com"),
+  metadataBase: new URL("https://www.corporatecricketcollective.com"),
 
   title: {
     default:
@@ -47,7 +47,7 @@ icons: {
   openGraph: {
     type: "website",
     locale: "en_NL",
-    url: "https://corporatecricketcollective.com",
+    url: "https://www.corporatecricketcollective.com",
     siteName: "Corporate Cricket Collective",
     title:
       "Corporate Cricket Collective | Premium Corporate Team Building in the Netherlands",
@@ -80,8 +80,8 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "Corporate Cricket Collective",
-    url: "https://corporatecricketcollective.com",
-    logo: "https://corporatecricketcollective.com/logo.png",
+    url: "https://www.corporatecricketcollective.com",
+    logo: "https://www.corporatecricketcollective.com/logo.png",
     description:
       "Corporate Cricket Collective delivers premium corporate cricket experiences and team-building programmes across the Netherlands.",
     areaServed: {
@@ -91,7 +91,7 @@ export default function RootLayout({
     contactPoint: {
       "@type": "ContactPoint",
       contactType: "Sales",
-      email: "ian_wessels@icloud.com",
+      email: "hello@corporatecricketcollective.com",
       areaServed: "NL",
       availableLanguage: ["English"],
     },
