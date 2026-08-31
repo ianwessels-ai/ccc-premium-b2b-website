@@ -3,9 +3,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { useLanguage } from "./LanguageProvider";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 export default function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const { t } = useLanguage();
 
   const closeMenu = () => setMenuOpen(false);
 
@@ -36,31 +39,35 @@ export default function Nav() {
               href="/#experiences"
               className="text-sm font-semibold text-white/90 transition hover:text-amber-400"
             >
-              Experiences
+              {t("nav.experiences")}
             </Link>
 
             <Link
               href="/#why-ccc"
               className="text-sm font-semibold text-white/90 transition hover:text-amber-400"
             >
-              Why CCC
+              {t("nav.whyCCC")}
             </Link>
 
             <Link
               href="/contact"
               className="text-sm font-semibold text-white/90 transition hover:text-amber-400"
             >
-              Contact
+              {t("nav.contact")}
             </Link>
           </div>
 
-          {/* Desktop CTA */}
-          <Link
-            href="/contact"
-            className="hidden rounded-full bg-amber-400 px-7 py-3 text-sm font-black uppercase tracking-wide text-slate-950 transition duration-300 hover:scale-105 hover:bg-amber-300 md:inline-flex"
-          >
-            Book Your Experience
-          </Link>
+          {/* Desktop controls */}
+          <div className="hidden items-center gap-5 md:flex">
+            <LanguageSwitcher />
+
+            <Link
+              href="/contact"
+              className="rounded-full bg-amber-400 px-7 py-3 text-sm font-black uppercase tracking-wide text-slate-950 transition duration-300 hover:scale-105 hover:bg-amber-300"
+            >
+              {t("nav.startPlanning")}
+            </Link>
+          </div>
 
           {/* Mobile hamburger button */}
           <button
@@ -109,7 +116,7 @@ export default function Nav() {
                 onClick={closeMenu}
                 className="rounded-2xl px-5 py-4 text-base font-semibold text-white transition hover:bg-white/5 hover:text-amber-400"
               >
-                Experiences
+                {t("nav.experiences")}
               </Link>
 
               <Link
@@ -117,7 +124,7 @@ export default function Nav() {
                 onClick={closeMenu}
                 className="rounded-2xl px-5 py-4 text-base font-semibold text-white transition hover:bg-white/5 hover:text-amber-400"
               >
-                Why CCC
+                {t("nav.whyCCC")}
               </Link>
 
               <Link
@@ -125,15 +132,20 @@ export default function Nav() {
                 onClick={closeMenu}
                 className="rounded-2xl px-5 py-4 text-base font-semibold text-white transition hover:bg-white/5 hover:text-amber-400"
               >
-                Contact
+                {t("nav.contact")}
               </Link>
+
+              {/* Mobile language switcher */}
+              <div className="mx-5 my-3 border-t border-white/10 pt-5">
+                <LanguageSwitcher />
+              </div>
 
               <Link
                 href="/contact"
                 onClick={closeMenu}
                 className="mt-3 flex min-h-12 items-center justify-center rounded-full bg-amber-400 px-6 py-3 text-center text-sm font-black uppercase tracking-wide text-slate-950 transition hover:bg-amber-300"
               >
-                Book Your Experience
+                {t("nav.startPlanning")}
               </Link>
             </div>
           </div>

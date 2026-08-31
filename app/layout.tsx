@@ -1,5 +1,6 @@
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
+import { LanguageProvider } from "../components/LanguageProvider";
 import type { Metadata } from "next";
 import "./globals.css";
 
@@ -34,16 +35,18 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
-icons: {
-  icon: [
-    {
-      url: "/icon.png",
-      type: "image/png",
-    },
-  ],
-  shortcut: "/icon.png",
-  apple: "/icon.png",
-},
+
+  icons: {
+    icon: [
+      {
+        url: "/icon.png",
+        type: "image/png",
+      },
+    ],
+    shortcut: "/icon.png",
+    apple: "/icon.png",
+  },
+
   openGraph: {
     type: "website",
     locale: "en_NL",
@@ -66,7 +69,8 @@ icons: {
   twitter: {
     card: "summary_large_image",
     title: "Corporate Cricket Collective",
-    description: "Premium corporate cricket experiences across the Netherlands.",
+    description:
+      "Premium corporate cricket experiences across the Netherlands.",
     images: ["/og-image.jpg"],
   },
 };
@@ -106,10 +110,12 @@ export default function RootLayout({
             __html: JSON.stringify(organizationJsonLd),
           }}
         />
-        <Nav/>
-        {children}
 
-        <Footer/>
+        <LanguageProvider>
+          <Nav />
+          {children}
+          <Footer />
+        </LanguageProvider>
       </body>
     </html>
   );

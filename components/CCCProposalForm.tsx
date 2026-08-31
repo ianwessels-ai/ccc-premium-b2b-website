@@ -2,9 +2,11 @@
 
 import { FormEvent, useState } from "react";
 import { useRouter } from "next/navigation";
+import { useLanguage } from "./LanguageProvider";
 
 export default function CCCProposalForm() {
   const router = useRouter();
+  const { t } = useLanguage();
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
@@ -28,21 +30,23 @@ export default function CCCProposalForm() {
 
       if (!response.ok || !result.success) {
         throw new Error(
-          result.error || "Your request could not be submitted."
+          result.error || t("proposal.errorSubmit")
         );
       }
 
       form.reset();
       router.push("/thank-you");
-    } catch (error) {
-      console.error("Proposal submission error:", error);
+      } catch (error) {
+  console.error("Proposal submission error:", error);
 
-      setErrorMessage(
-        "Something went wrong while submitting your request. Please refresh the page and try again."
-      );
+  if (error instanceof Error) {
+    setErrorMessage(error.message);
+  } else {
+    setErrorMessage(t("proposal.errorGeneral"));
+  }
 
-      setIsSubmitting(false);
-    }
+  setIsSubmitting(false);
+}
   }
 
   return (
@@ -62,7 +66,7 @@ export default function CCCProposalForm() {
 
       <div className="grid gap-5 md:grid-cols-2">
         <label className="text-sm font-bold text-navy">
-          Full Name
+          {t("proposal.fullName")}
           <input
             type="text"
             name="name"
@@ -72,7 +76,7 @@ export default function CCCProposalForm() {
         </label>
 
         <label className="text-sm font-bold text-navy">
-          Company Name
+          {t("proposal.companyName")}
           <input
             type="text"
             name="company"
@@ -82,7 +86,7 @@ export default function CCCProposalForm() {
         </label>
 
         <label className="text-sm font-bold text-navy">
-          Job Title
+          {t("proposal.jobTitle")}
           <input
             type="text"
             name="jobTitle"
@@ -92,7 +96,7 @@ export default function CCCProposalForm() {
         </label>
 
         <label className="text-sm font-bold text-navy">
-          Email Address
+          {t("proposal.email")}
           <input
             type="email"
             name="email"
@@ -102,7 +106,7 @@ export default function CCCProposalForm() {
         </label>
 
         <label className="text-sm font-bold text-navy">
-          Phone Number
+          {t("proposal.phone")}
           <input
             type="tel"
             name="phone"
@@ -112,7 +116,7 @@ export default function CCCProposalForm() {
         </label>
 
         <label className="text-sm font-bold text-navy">
-          Number of Participants
+          {t("proposal.participants")}
           <input
             type="number"
             name="participants"
@@ -123,7 +127,7 @@ export default function CCCProposalForm() {
         </label>
 
         <label className="text-sm font-bold text-navy">
-          Preferred Location
+          {t("proposal.location")}
           <input
             type="text"
             name="location"
@@ -133,7 +137,7 @@ export default function CCCProposalForm() {
         </label>
 
         <label className="text-sm font-bold text-navy">
-          Preferred Date
+          {t("proposal.date")}
           <input
             type="date"
             name="date"
@@ -144,7 +148,7 @@ export default function CCCProposalForm() {
       </div>
 
       <label className="mt-5 block text-sm font-bold text-navy">
-        Service Interest
+        {t("proposal.serviceInterest")}
         <select
           name="serviceInterest"
           required
@@ -152,21 +156,21 @@ export default function CCCProposalForm() {
           className="mt-2 w-full rounded-xl border border-slate-200 bg-white px-4 py-3 outline-none transition focus:border-gold"
         >
           <option value="Corporate Experience / Team Building">
-            Corporate Experience / Team Building
+            {t("proposal.serviceTeamBuilding")}
           </option>
 
           <option value="Corporate Cricket Tournament">
-            Corporate Cricket Tournament
+            {t("proposal.serviceTournament")}
           </option>
 
           <option value="Executive Networking">
-            Executive Networking
+            {t("proposal.serviceNetworking")}
           </option>
         </select>
       </label>
 
       <label className="mt-5 block text-sm font-bold text-navy">
-        Estimated Budget
+        {t("proposal.budget")}
         <select
           name="budget"
           required
@@ -181,7 +185,7 @@ export default function CCCProposalForm() {
       </label>
 
       <label className="mt-5 block text-sm font-bold text-navy">
-        Message
+        {t("proposal.message")}
         <textarea
           name="message"
           rows={5}
@@ -211,7 +215,9 @@ export default function CCCProposalForm() {
         disabled={isSubmitting}
         className="mt-4 w-full rounded-full bg-gold px-7 py-4 text-sm font-black text-navy shadow-premium transition hover:brightness-95 disabled:cursor-not-allowed disabled:opacity-60"
       >
-        {isSubmitting ? "Sending Request..." : "Request My Proposal"}
+        {isSubmitting
+          ? t("proposal.sending")
+          : t("proposal.submit")}
       </button>
     </form>
   );

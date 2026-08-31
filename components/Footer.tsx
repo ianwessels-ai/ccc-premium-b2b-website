@@ -1,6 +1,12 @@
+"use client";
+
 import Link from "next/link";
+import { useLanguage } from "./LanguageProvider";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 export default function Footer() {
+  const { t } = useLanguage();
+
   return (
     <footer className="bg-slate-950 px-6 py-16 text-white">
       <div className="mx-auto max-w-7xl">
@@ -11,42 +17,45 @@ export default function Footer() {
             </p>
 
             <p className="mt-4 max-w-md text-slate-400">
-              More Than A Game. A Stronger Workplace.
+              {t("footer.tagline")}
             </p>
 
             <p className="mt-6 max-w-md leading-7 text-slate-400">
-              Premium corporate cricket experiences designed to strengthen
-              teams, build workplace culture and create unforgettable memories.
+              {t("footer.description")}
             </p>
+
+            <div className="mt-6">
+              <LanguageSwitcher />
+            </div>
           </div>
 
           <div>
             <p className="font-black uppercase tracking-wide text-amber-400">
-              Quick Links
+              {t("footer.quickLinks")}
             </p>
 
             <div className="mt-5 grid gap-3 text-slate-400">
               <Link href="/" className="hover:text-white">
-                Home
+                {t("footer.home")}
               </Link>
 
               <Link href="/#experiences" className="hover:text-white">
-                Experiences
+                {t("footer.experiences")}
               </Link>
 
               <Link href="/contact" className="hover:text-white">
-                Contact
+                {t("footer.contact")}
               </Link>
 
               <Link href="/terms" className="hover:text-white">
-                Terms
+                {t("footer.terms")}
               </Link>
             </div>
           </div>
 
           <div>
             <p className="font-black uppercase tracking-wide text-amber-400">
-              Contact
+              {t("footer.contact")}
             </p>
 
             <div className="mt-5 grid gap-3 text-slate-400">
@@ -57,7 +66,7 @@ export default function Footer() {
                 hello@corporatecricketcollective.com
               </a>
 
-              <p>Amsterdam, The Netherlands</p>
+              <p>{t("footer.location")}</p>
 
               <a
                 href="https://www.linkedin.com/company/corporate-cricket-collective"
@@ -81,28 +90,28 @@ export default function Footer() {
         </div>
 
         <div className="mt-14 border-t border-white/10 pt-8">
-  <p className="text-sm text-slate-500">
-    © 2026 Corporate Cricket Collective. All rights reserved.
-  </p>
+          <p className="text-sm text-slate-500">
+            © 2026 Corporate Cricket Collective. {t("footer.rights")}
+          </p>
 
-  <p className="mt-2 text-sm text-slate-500">
-    Registered in the Netherlands
-  </p>
+          <p className="mt-2 text-sm text-slate-500">
+            {t("footer.registered")}
+          </p>
 
-  <div className="mt-4 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-slate-400">
-    <p>
-      <span className="font-semibold text-white">KVK:</span>{" "}
-      <span>42124948</span>
-    </p>
+          <div className="mt-4 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-slate-400">
+            <p>
+              <span className="font-semibold text-white">KVK:</span>{" "}
+              <span>42124948</span>
+            </p>
 
-    <span className="hidden md:block text-slate-600">|</span>
+            <span className="hidden text-slate-600 md:block">|</span>
 
-    <p>
-      <span className="font-semibold text-white">VAT:</span>{" "}
-      <span>NL005516965B39</span>
-    </p>
-  </div>
-</div>
+            <p>
+              <span className="font-semibold text-white">VAT:</span>{" "}
+              <span>NL005516965B39</span>
+            </p>
+          </div>
+        </div>
       </div>
     </footer>
   );
