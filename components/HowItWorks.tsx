@@ -78,7 +78,7 @@ export default function HowItWorks() {
                 {step.number}
               </p>
 
-              <h3 className="mt-6 text-xl font-black leading-tight">
+              <h3 className="mt-6 min-h-[3rem] text-xl font-black leading-tight">
                 {step.title}
               </h3>
 
