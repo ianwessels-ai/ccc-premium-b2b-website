@@ -2,10 +2,9 @@
 
 import Link from "next/link";
 import { useLanguage } from "./LanguageProvider";
-import LanguageSwitcher from "./LanguageSwitcher";
 
 export default function Footer() {
-  const { t } = useLanguage();
+  const { language, setLanguage, t } = useLanguage();
 
   return (
     <footer className="bg-slate-950 px-6 py-16 text-white">
@@ -24,8 +23,38 @@ export default function Footer() {
               {t("footer.description")}
             </p>
 
-            <div className="mt-6">
-              <LanguageSwitcher />
+            {/* Footer language switcher */}
+            <div
+              className="mt-6 flex items-center gap-2 text-sm font-bold"
+              aria-label="Language selector"
+            >
+              <button
+                type="button"
+                onClick={() => setLanguage("en")}
+                aria-pressed={language === "en"}
+                className={`transition-colors ${
+                  language === "en"
+                    ? "text-amber-400"
+                    : "text-white hover:text-amber-400"
+                }`}
+              >
+                EN
+              </button>
+
+              <span className="text-white/40">|</span>
+
+              <button
+                type="button"
+                onClick={() => setLanguage("nl")}
+                aria-pressed={language === "nl"}
+                className={`transition-colors ${
+                  language === "nl"
+                    ? "text-amber-400"
+                    : "text-white hover:text-amber-400"
+                }`}
+              >
+                NL
+              </button>
             </div>
           </div>
 
