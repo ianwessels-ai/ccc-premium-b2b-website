@@ -69,38 +69,45 @@ export default function Nav() {
             </Link>
           </div>
 
-          {/* Mobile hamburger button */}
-          <button
-            type="button"
-            onClick={() => setMenuOpen((current) => !current)}
-            className="relative z-50 flex h-12 w-12 items-center justify-center rounded-full border border-white/25 bg-slate-950/20 text-white transition hover:bg-white/10 md:hidden"
-            aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
-            aria-expanded={menuOpen}
-          >
-            <span className="sr-only">
-              {menuOpen ? "Close menu" : "Open menu"}
-            </span>
+          {/* Mobile controls */}
+          <div className="relative z-50 flex items-center gap-3 md:hidden">
+            <LanguageSwitcher />
 
-            <div className="flex flex-col gap-1.5">
-              <span
-                className={`block h-0.5 w-6 bg-current transition duration-300 ${
-                  menuOpen ? "translate-y-2 rotate-45" : ""
-                }`}
-              />
+            {/* Mobile hamburger button */}
+            <button
+              type="button"
+              onClick={() => setMenuOpen((current) => !current)}
+              className="flex h-12 w-12 items-center justify-center rounded-full border border-white/25 bg-slate-950/20 text-white transition hover:bg-white/10"
+              aria-label={
+                menuOpen ? "Close navigation menu" : "Open navigation menu"
+              }
+              aria-expanded={menuOpen}
+            >
+              <span className="sr-only">
+                {menuOpen ? "Close menu" : "Open menu"}
+              </span>
 
-              <span
-                className={`block h-0.5 w-6 bg-current transition duration-300 ${
-                  menuOpen ? "opacity-0" : ""
-                }`}
-              />
+              <div className="flex flex-col gap-1.5">
+                <span
+                  className={`block h-0.5 w-6 bg-current transition duration-300 ${
+                    menuOpen ? "translate-y-2 rotate-45" : ""
+                  }`}
+                />
 
-              <span
-                className={`block h-0.5 w-6 bg-current transition duration-300 ${
-                  menuOpen ? "-translate-y-2 -rotate-45" : ""
-                }`}
-              />
-            </div>
-          </button>
+                <span
+                  className={`block h-0.5 w-6 bg-current transition duration-300 ${
+                    menuOpen ? "opacity-0" : ""
+                  }`}
+                />
+
+                <span
+                  className={`block h-0.5 w-6 bg-current transition duration-300 ${
+                    menuOpen ? "-translate-y-2 -rotate-45" : ""
+                  }`}
+                />
+              </div>
+            </button>
+          </div>
 
           {/* Mobile dropdown */}
           <div
@@ -134,11 +141,6 @@ export default function Nav() {
               >
                 {t("nav.contact")}
               </Link>
-
-              {/* Mobile language switcher */}
-              <div className="mx-5 my-3 border-t border-white/10 pt-5">
-                <LanguageSwitcher />
-              </div>
 
               <Link
                 href="/contact"
