@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { FaLinkedinIn, FaInstagram } from "react-icons/fa";
 import { useLanguage } from "./LanguageProvider";
 
 export default function Footer() {
@@ -23,7 +24,6 @@ export default function Footer() {
               {t("footer.description")}
             </p>
 
-            {/* Footer language switcher */}
             <div
               className="mt-6 flex items-center gap-2 text-sm font-bold"
               aria-label="Language selector"
@@ -97,23 +97,27 @@ export default function Footer() {
 
               <p>{t("footer.location")}</p>
 
-              <a
-                href="https://www.linkedin.com/company/corporate-cricket-collective"
-                target="_blank"
-                rel="noreferrer"
-                className="hover:text-white"
-              >
-                LinkedIn
-              </a>
+              <div className="mt-2 flex items-center gap-4">
+                <a
+                  href="https://www.linkedin.com/company/corporate-cricket-collective"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Corporate Cricket Collective on LinkedIn"
+                  className="text-2xl text-slate-400 transition-colors hover:text-amber-400"
+                >
+                  <FaLinkedinIn />
+                </a>
 
-              <a
-                href="https://www.instagram.com/corporatecricketcollective?igsh=ZzNpb3JhM3d2bzB2&utm_source=qr"
-                target="_blank"
-                rel="noreferrer"
-                className="hover:text-white"
-              >
-                Instagram
-              </a>
+                <a
+                  href="https://www.instagram.com/corporatecricketcollective?igsh=ZzNpb3JhM3d2bzB2&utm_source=qr"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Corporate Cricket Collective on Instagram"
+                  className="text-2xl text-slate-400 transition-colors hover:text-amber-400"
+                >
+                  <FaInstagram />
+                </a>
+              </div>
             </div>
           </div>
         </div>
