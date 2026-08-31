@@ -3,12 +3,21 @@
 import { useLanguage } from "./LanguageProvider";
 
 export default function HowItWorks() {
-  const { t } = useLanguage();
+  const { language, t } = useLanguage();
 
   const steps = [
     {
       number: "01",
-      title: t("howItWorks.discovery.title"),
+      title:
+        language === "nl" ? (
+          <>
+            Kennismakings
+            <br />
+            gesprek
+          </>
+        ) : (
+          t("howItWorks.discovery.title")
+        ),
       text: t("howItWorks.discovery.text"),
     },
     {
@@ -23,7 +32,16 @@ export default function HowItWorks() {
     },
     {
       number: "04",
-      title: t("howItWorks.eventDay.title"),
+      title:
+        language === "nl" ? (
+          <>
+            Evenement
+            <br />
+            dag
+          </>
+        ) : (
+          t("howItWorks.eventDay.title")
+        ),
       text: t("howItWorks.eventDay.text"),
     },
     {
@@ -60,7 +78,7 @@ export default function HowItWorks() {
                 {step.number}
               </p>
 
-              <h3 className="mt-6 break-words text-2xl font-black leading-tight">
+              <h3 className="mt-6 text-xl font-black leading-tight">
                 {step.title}
               </h3>
 
